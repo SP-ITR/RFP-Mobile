@@ -1,10 +1,10 @@
 const BASE_URL = "https://rfp-api.itrtechsystems.com/api/v1";
 
-export async function login({ email, contact, password }) {
+export async function login({ email,  password }) {
   const res = await fetch(`${BASE_URL}/auth/login`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ email, contact, password }),
+    body: JSON.stringify({ email, password }),
   });
 
   const text = await res.text();
